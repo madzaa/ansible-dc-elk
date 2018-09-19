@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:  
+  - name: "Docker-compose Build"
+    shell:
+      chdir: "../docker-elk"
+      cmd: "docker-compose build"
+      cmd: "docker-compose ps"
+      
