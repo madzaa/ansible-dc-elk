@@ -5,7 +5,7 @@
 cluster.name: "docker-cluster"
 node.name: "node-1"
 network.host: 0.0.0.0
-http.port: 9201
+http.port: 9200
 
 cluster.name: "docker-cluster"
 node.name: "node-2"
