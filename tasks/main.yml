@@ -1,7 +1,3 @@
----
-#- include: config.yml
-#  tags:
-#    - docker-config
 
 - include: install.yml
   tags:
@@ -10,3 +6,10 @@
 - include: state.yml
   tags:
     - docker-state
+
+#- include: elk.yml
+#  tags:
+#    - elk-install
+#    - elasticsearch-install
+#    - logstash-install
+#    - kibana-install

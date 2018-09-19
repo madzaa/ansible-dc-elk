@@ -46,12 +46,8 @@
       with_items:
         - python-setuptools
 
-    - name: Installing dependencies
-      easy_install:
-        name: pip
-
     - name: Installing docker compose
       pip:
         name: docker-compose
-        version: 1.22.0
+        version: "{{ docker_compose_version | default('1.22.0') }}"
         state: present
