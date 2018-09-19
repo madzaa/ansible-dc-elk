@@ -1,0 +1,19 @@
+---
+## 2 Node config
+## Make sure your VM is big
+
+cluster.name: "docker-cluster"
+node.name: "node-1"
+network.host: 0.0.0.0
+http.port: 9201
+
+cluster.name: "docker-cluster"
+node.name: "node-2"
+network.host: 0.0.0.0
+http.port: 9201
+
+# (master_eligible_nodes / 2) + 1
+discovery.zen.minimum_master_nodes: 2
+
+## Use single node discovery in order to disable production mode and avoid bootstrap checks
+discovery.type: single-node
