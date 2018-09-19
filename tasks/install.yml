@@ -1,0 +1,57 @@
+---
+- hosts: localhost
+  tasks:
+    - name: 'Installing dependencies'
+      apt:
+        pkg: "{{ item }}"
+        state: present
+      with_items:
+      - apt-transport-https
+      - ca-certificates
+
+    - name: 'Adding APT key'
+      apt_key:
+        id: "58118E89F3A912897C070ADBF76221572C52609D"
+        keyserver: "hkp://p80.pool.sks-keyservers.net:80"
+
+    - name: 'Adding APT repository'
+      apt_repository:
+        repo: "deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main"
+        update_cache: yes
+
+    - name: 'Installing APT packages'
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python-setuptools
+        - docker-engine
+
+    - name: 'Installing Ansible dependencies'
+      easy_install:
+        name: pip
+
+    - name: 'Installing PIP dependencies'
+      pip:
+        name: "{{ item.name | default(item) }}"
+        state: present
+        version: "{{ item.version | default(omit) }}"
+      with_items: 
+        - docker-py
+
+    - name: Installing packages
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python-setuptools
+
+    - name: Installing dependencies
+      easy_install:
+        name: pip
+
+    - name: Installing docker compose
+      pip:
+        name: docker-compose
+        version: 1.22.0
+        state: present

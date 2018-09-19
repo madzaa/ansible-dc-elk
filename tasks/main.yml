@@ -1,0 +1,12 @@
+---
+#- include: config.yml
+#  tags:
+#    - docker-config
+
+- include: install.yml
+  tags:
+    - docker-install
+
+- include: state.yml
+  tags:
+    - docker-state

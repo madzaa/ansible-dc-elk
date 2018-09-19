@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Configuring state
+    service:
+      name: docker
+      enabled: yes
+      state: restarted
