@@ -8,7 +8,7 @@ services:
       args:
         ELK_VERSION: $ELK_VERSION
     volumes:
-      - .dc-elk/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -23,8 +23,8 @@ services:
       args:
         ELK_VERSION: $ELK_VERSION
     volumes:
-      - .dc-elk/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - .dc-elk/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
       - "5041:5041"
       - "9600:9600"
@@ -41,7 +41,7 @@ services:
       args:
         ELK_VERSION: $ELK_VERSION
     volumes:
-      - .dc-elk/kibana/config/:/usr/share/kibana/config:ro
+      - ./kibana/config/:/usr/share/kibana/config:ro
     ports:
       - "5601:5601"
     networks:
