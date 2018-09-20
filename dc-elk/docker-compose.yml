@@ -15,10 +15,10 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      - "ES_JAVA_OPTS=-Xmx256m -Xms256m"
     networks:
       - elk
-      
+
   elasticsearch2:
     build:
       context: elasticsearch/
@@ -29,7 +29,8 @@ services:
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      - "ES_JAVA_OPTS=-Xmx256m -Xms256m"
+      - "discovery.zen.ping.unicast.hosts=elasticsearch"
     networks:
       - elk
 
