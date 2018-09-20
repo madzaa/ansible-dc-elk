@@ -1,6 +1,15 @@
 # ELK deployment
 
-Deploy an ELK stack Docker Image with some help from Ansible
+Deploy an ELK stack Docker Image with some help from Ansible.
+## Overview
+
+This project will deploy the following:
+  1.Ansible
+    * Docker & Docker-Compose
+  2. Docker-Compose
+    * Docker Cluster of 2 elasticsearch nodes
+    * 1 Logstash node
+    * 1 Kibana node
 
 ## Getting Started
 
@@ -41,9 +50,28 @@ If everything is up and running head over to Kibana
 http://localhost:5601
 ```
 
-## Deployment
+## Configuration
 
-<Add additional notes about how to deploy this on a live system>
+In order to change the configuration of the ELK stack edit :
+
+```
+dc-elk/docker-compose.yml
+```
+
+For Docker configuration see:
+```
+tasks/main.yml
+```
+
+NB! All of the defaults have been filled in in the light of a test exercise
+
+## Compability
+
+* Ubuntu LTS
+* TODO: CentOS
+* TODO: Debian
+* TODO: Fedora
+
 
 ## Acknowledgments
 
