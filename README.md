@@ -38,7 +38,7 @@ sudo docker-compose -f dc-elk/docker-compose.yml ps
 If everything is up and running head over to Kibana
 
 ```
-https://localhost:5601
+http://localhost:5601
 ```
 
 ## Deployment
