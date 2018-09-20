@@ -8,8 +8,10 @@ sudo apt install ansible
 sudo ansible-playbook tasks/main.yml
 # Start the ELK stack with docker compose
 sudo docker-compose -f dc-elk/docker-compose.yml up -d
-# listen up
-sudo mkdir logs /tmp/logstash/logfile.log; sudo nc localhost 5041 < /tmp/logstash/logfile.log
+# Make stuff
+sudo mkdir -p /tmp/logstash/; sudo touch /tmp/logstash/logfile.log 
+# Ere me now
+sudo nc localhost 5041 < /tmp/logstash/logfile.log
 # make sum logs
 ehco "A bug is never just a mistake. It represents something bigger. An error of thinking. That makes you who you are." > /tmp/logstash/logfile.log
 # make it rain
