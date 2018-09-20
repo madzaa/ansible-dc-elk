@@ -10,8 +10,8 @@ services:
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     ports:
-      - "9200"
-      - "9300"
+      - "9200:9200"
+      - "9300:9200"
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
@@ -26,6 +26,9 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch2.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    ports:
+      - "9200:9200"
+      - "9300:9200"
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
