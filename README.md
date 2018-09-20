@@ -1,6 +1,6 @@
-# Ansible ELK deployment
+# ELK deployment
 
-Deploy an ELK stack Docker Image using Ansible
+Deploy an ELK stack Docker Image with some help from Ansible
 
 ## Getting Started
 
