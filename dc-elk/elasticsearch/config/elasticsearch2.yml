@@ -1,5 +1,4 @@
-cluster.name: elastic_cluster1
-node.name: node-1
+node.name: ${HOSTNAME}_node2
 node.master: true
 transport.host: localhost
 http.port: 9200
