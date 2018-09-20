@@ -17,12 +17,14 @@ sudo mkdir -p /home/${USER}/logstash/; sudo touch /home/${USER}/logstash/logfile
 # Ere me now
 sudo nc localhost 5041 < /home/${USER}/logstash/logfile.log
 # make sum logs
-sudo echo "A bug is never just a mistake. It represents something bigger. An error of thinking. That makes you who you are." > /home/${USER}/logstash/logfile.log
+sudo bash -c " echo A bug is never just a mistake. It represents something bigger. A \
+n error of thinking. That makes you who you are. > /home/${USER}/logstash/logfile.log"
 # make it rain
 curl -XPOST -D- 'http://localhost:5601/api/saved_objects/index-pattern' \
     -H 'Content-Type: application/json' \
     -H 'kbn-version: 6.4.0' \
     -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
+\n
 echo "Magic inbound in 25s"
-sleep 25s
+sleep 15s
 echo "Open up https://localhost:5601 to see the magic"
