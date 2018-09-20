@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-Preferably acces to Azure
+access to Azure
 ```
 
 Find the ansible-playbook to set up a VM for you 
