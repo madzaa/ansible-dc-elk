@@ -13,7 +13,7 @@ echo "Setting up ELK environment"
 echo "##########################"
 sleep 25s
 # Make stuff
-sudo mkdir -p /home/${USER}/logstash/; sudo touch /home/${USER}/logstash/logfile.log
+mkdir -p /home/${USER}/logstash/; touch /home/${USER}/logstash/logfile.log
 # Ere me now
 sudo nc localhost 5041 < /home/${USER}/logstash/logfile.log
 # make sum logs
