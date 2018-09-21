@@ -90,8 +90,3 @@ NB! All of the defaults have been filled in in the light of a test exercise
 * TODO: CentOS
 * TODO: Debian
 * TODO: Fedora
-
-
-## Acknowledgments
-
-* Inspiration from deviantonys ELK stack
