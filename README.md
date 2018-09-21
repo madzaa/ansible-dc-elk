@@ -87,6 +87,10 @@ NB! All of the defaults have been filled in in the light of a test exercise
 ## Compability
 
 * Ubuntu LTS
-* TODO: CentOS
-* TODO: Debian
-* TODO: Fedora
+
+## TODO:
+
+* CentOS Compability
+* Debian Compability
+* Fedora Compability
+* makefile it
