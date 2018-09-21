@@ -25,7 +25,7 @@ These instructions will get you a copy of the project up and running on your loc
 access to a VM
 ```
 
-You can set a VM up in Azure with ansible using the playbook in this repo 
+You can set a preconfigured VM up in Azure with Ansible using the playbook in this repo 
 
 ```
 https://github.com/madzaa/provision_elk
