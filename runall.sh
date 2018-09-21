@@ -14,18 +14,18 @@ echo "##########################"
 sleep 25s
 # Make stuff
 mkdir -p /home/${USER}/logstash/; touch /home/${USER}/logstash/logfile.log
-# make it rain
+# Kibana pattern
 curl -XPOST -D- 'http://localhost:5601/api/saved_objects/index-pattern' \
     -H 'Content-Type: application/json' \
     -H 'kbn-version: 6.4.0' \
     -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
-#
+# ZZZ for the curl to work
 sleep 10s
-#
+# Test script for ES/LS
 sudo bash -c " echo A bug is never just a mistake. It represents something bigger. An error of thinking. That makes you who you are. > /home/${USER}/logstash/logfile.log"
 #
 sleep 10s
-#
+# ES/LS
 nc localhost 5041 < /home/${USER}/logstash/logfile.log
 #
 echo "Magic happens here - https://localhost:5601"
