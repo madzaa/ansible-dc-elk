@@ -7,11 +7,11 @@ This project will deploy the following:
 
 Ansible
 
-* Docker & Docker-Compose
+* Installs Docker & Docker-Compose
 
-Docker-Compose
+Docker image of
   
-* Docker Cluster of 2 elasticsearch nodes
+* Cluster of 2 elasticsearch nodes
 * 1 Logstash node
 * 1 Kibana node
 
