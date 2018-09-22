@@ -5,7 +5,7 @@ sudo sysctl -w vm.max_map_count=262144
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
+sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install ansible
 # Run Ansible-playbook to download docker and docker-compose. NB! The defaults are already filled in
 # in the light of this project
