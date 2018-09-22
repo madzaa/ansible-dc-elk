@@ -7,3 +7,6 @@
   tags:
     - docker-state
 
+- include: install-elk.yml
+  tags:
+    - elk-install
