@@ -1,9 +1,18 @@
 ---
-- hosts: localhost
-  tasks:  
-  - name: "Docker-compose Build"
-    shell:
-      chdir: "../docker-elk"
-      cmd: "docker-compose build"
-      cmd: "docker-compose ps"
-      
+- name: deployment
+  hosts: localhost
+  tasks:
+    - docker_service:
+        project_src: ../dc-elk/
+      register: output
+
+    - docker_service:
+        project_src: ../dc-elk/
+        build: no
+      register: output
+
+    - docker_service:
+        project_src: ../dc-elk/
+        build: no
+        restarted: true
+      register: output
