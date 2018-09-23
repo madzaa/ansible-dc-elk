@@ -44,7 +44,7 @@ cd ansible-dc-elk
 Run the following command to see the status of the stack
 
 ```
-sudo docker-compose -f dc-elk/docker-compose.yml ps
+sudo docker-compose ps
 ```
 
 If everything is up and running head over to Kibana
@@ -58,12 +58,12 @@ http://localhost:5601
 In order to change the configuration of the ELK stack edit:
 
 ```
-dc-elk/docker-compose.yml
+files/docker/docker-compose.yml
 ```
 You can change the version of the ELK stack in:
 
 ```
-dc-elk/.env
+files/docker/.env
 ```
 
 If you change the configuration make sure to build the image again by running:
