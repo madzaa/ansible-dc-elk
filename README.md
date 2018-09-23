@@ -3,14 +3,10 @@
 Deploy an ELK stack Docker Image with some help from Ansible.
 ## Overview
 
-This project will deploy the following:
-Ansible
+This project will deploy the following with Ansible
 
-* Docker & Docker-Compose
-
-Docker-Compose
-  
-* Docker Cluster of 2 elasticsearch nodes
+* Docker & Docker-Compose  
+* Cluster of 2 Elasticsearch nodes
 * 1 Logstash node
 * 1 Kibana node
 
