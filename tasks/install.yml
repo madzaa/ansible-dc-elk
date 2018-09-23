@@ -37,7 +37,7 @@
         state: present
         version: "{{ item.version | default(omit) }}"
       with_items: 
-        - docker-py
+        - docker
 
     - name: Installing packages
       package:
