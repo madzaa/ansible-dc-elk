@@ -3,16 +3,16 @@
   hosts: localhost
   tasks:
     - docker_service:
-        project_src: ../dc-elk/
+        project_src: ../files/docker/
       register: output
 
     - docker_service:
-        project_src: ../dc-elk/
+        project_src: ../files/docker/
         build: no
       register: output
 
     - docker_service:
-        project_src: ../dc-elk/
+        project_src: ../files/docker/
         build: no
         restarted: true
       register: output
