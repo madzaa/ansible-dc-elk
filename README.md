@@ -4,13 +4,14 @@ Deploy an ELK stack Docker Image with some help from Ansible.
 ## Overview
 
 This project will deploy the following:
+
 Ansible
 
-* Docker & Docker-Compose
+* Installs Docker & Docker-Compose
 
-Docker-Compose
+Docker image of
   
-* Docker Cluster of 2 elasticsearch nodes
+* Cluster of 2 elasticsearch nodes
 * 1 Logstash node
 * 1 Kibana node
 
@@ -21,10 +22,14 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-access to Azure
+access to a VM
 ```
 
-Find the ansible-playbook to set up a VM for you 
+You can set a preconfigured VM up in Azure with Ansible using the playbook in this repo 
+
+```
+https://github.com/madzaa/provision_elk
+```
 
 ### Installing
 
@@ -60,6 +65,17 @@ In order to change the configuration of the ELK stack edit :
 ```
 dc-elk/docker-compose.yml
 ```
+You can change the version of the ELK stack in:
+
+```
+dc-elk/.env
+```
+
+If you change the configuration make sure to build the image again by running:
+
+```
+sudo docker-compose build
+```
 
 For Docker configuration see:
 ```
@@ -71,11 +87,10 @@ NB! All of the defaults have been filled in in the light of a test exercise
 ## Compability
 
 * Ubuntu LTS
-* TODO: CentOS
-* TODO: Debian
-* TODO: Fedora
 
+## TODO:
 
-## Acknowledgments
-
-* Inspiration from deviantonys ELK stack
+* CentOS Compability
+* Debian Compability
+* Fedora Compability
+* makefile it
