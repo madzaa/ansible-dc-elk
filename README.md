@@ -74,7 +74,7 @@ sudo docker-compose build
 
 For Docker configuration see:
 ```
-tasks/main.yml
+tasks/install.yml
 ```
 
 NB! All of the defaults have been filled in in the light of a test exercise
