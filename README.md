@@ -1,6 +1,6 @@
 # ELK deployment
 
-Deploy an ELK stack Docker Image with some help from Ansible.
+Deploy an ELK stack Docker Image with  Ansible.
 ## Overview
 
 This project will deploy the following with Ansible
@@ -28,7 +28,7 @@ https://github.com/madzaa/provision_elk
 
 ### Installing
 
-Clone the repo and run the script inside
+Clone the repo and run the script inside to set everything up for you
 
 ```
 git clone https://github.com/madzaa/ansible-dc-elk.git
@@ -55,7 +55,7 @@ http://localhost:5601
 
 ## Configuration
 
-In order to change the configuration of the ELK stack edit :
+In order to change the configuration of the ELK stack edit:
 
 ```
 dc-elk/docker-compose.yml
