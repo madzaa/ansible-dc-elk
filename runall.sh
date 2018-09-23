@@ -10,8 +10,6 @@ sudo apt-get install ansible
 # Run Ansible-playbook to download docker and docker-compose. NB! The defaults are already filled in
 # in the light of this project
 sudo ansible-playbook tasks/main.yml
-# Start the ELK stack with docker compose
-# sudo docker-compose -f dc-elk/docker-compose.yml up -d
 # ZZZ
 echo "Setting up ELK environment"
 echo "##########################"
