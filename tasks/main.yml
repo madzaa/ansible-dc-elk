@@ -1,5 +1,5 @@
 
-- include: install.yml
+- include: install-docker.yml
   tags:
     - docker-install
 
@@ -7,9 +7,6 @@
   tags:
     - docker-state
 
-#- include: elk.yml
-#  tags:
-#    - elk-install
-#    - elasticsearch-install
-#    - logstash-install
-#    - kibana-install
+- include: elk.yml
+  tags:
+    - elk-install

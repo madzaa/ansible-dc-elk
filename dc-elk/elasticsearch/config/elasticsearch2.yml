@@ -3,8 +3,3 @@ node.master: true
 transport.host: localhost
 http.port: 9200
 network.host: 0.0.0.0
-
-# (master_eligible_nodes / 2) + 1
-#discovery.zen.minimum_master_nodes: 2
-
-
